@@ -1,15 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "CLIENT/vite-project/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "CLIENT/vite-project/dist"
-      }
-    }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/CLIENT/vite-project/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
